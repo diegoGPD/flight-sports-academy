@@ -1,0 +1,160 @@
+{
+  "settings": {
+    "siteTitle": "Flight Sports Academy | Youth Sports in San Antonio, TX",
+    "metaDescription": "Youth sports academy in San Antonio, TX. Motor development for ages 2–6 and soccer, flag football and athletic training for ages 7+. Book a trial class.",
+    "siteUrl": "https://www.flightsportsacademy.com",
+    "googleAnalyticsId": "",
+    "whatsappNumber": "",
+    "instagramUrl": "",
+    "contactEmail": "",
+    "heroVideo": "/media/hero-loop.mp4",
+    "heroPoster": "/media/hero-loop.jpg"
+  },
+  "hero": {
+    "eyebrow": "Youth sports academy · San Antonio, TX",
+    "title": "Kids who can't wait to come back tomorrow.",
+    "subtitle": "We build confident, resilient, kind and disciplined kids through sport — from first steps in motor skills at age 2 to sport-specific training in soccer and flag football.",
+    "primaryButton": "Book a trial class",
+    "secondaryButton": "See programs",
+    "stats": [
+      { "value": "Ages 2+", "label": "Programs by age" },
+      { "value": "Mon–Thu", "label": "Morning & evening classes" },
+      { "value": "1 year", "label": "Training San Antonio kids" }
+    ]
+  },
+  "mission": {
+    "quote": "Success isn't measured by how many goals kids score. It's measured by how many kids want to come back tomorrow.",
+    "quoteSpanish": "El éxito de hoy no se mide por cuántos goles anotaron los niños. Se mide por cuántos niños quieren volver mañana.",
+    "pillars": ["Confident", "Resilient", "Kind", "Disciplined"]
+  },
+  "programs": {
+    "eyebrow": "Programs",
+    "title": "Two paths. One way of training.",
+    "tracks": [
+      {
+        "ages": "2–6",
+        "headline": "Specialists in motor development and sport fundamentals",
+        "text": "Fun first. Kids build coordination, balance and body confidence through games — and learn to listen, take turns and try again.",
+        "button": "Book a trial · ages 2–6",
+        "items": [
+          { "name": "Motor Skills", "tag": "ages 2–4", "text": "Small morning groups focused on movement foundations. 1x or 2x per week; limited spots." },
+          { "name": "Movement & Play", "tag": "", "text": "Plyometrics, hand-eye coordination games and bodyweight work. Fun, dynamic, and it keeps kids wanting more." }
+        ]
+      },
+      {
+        "ages": "7+",
+        "headline": "Specialized training by sport",
+        "text": "Results-focused coaching for kids who want to get better at their sport and compete — with the same focus on discipline and teamwork.",
+        "button": "Book a trial · ages 7+",
+        "items": [
+          { "name": "Soccer Academy", "tag": "", "text": "Technique, game sense and match play." },
+          { "name": "Football Academy", "tag": "flag football", "text": "Routes, throwing, flag pulling and team plays." },
+          { "name": "Athletic Development", "tag": "", "text": "High-intensity work with rest to build explosiveness, strength and conditioning. For kids serious about sports." },
+          { "name": "Summer Camp", "tag": "June & July", "text": "Seasonal camps with multi-sport training." }
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "Inside a class",
+    "title": "See them train",
+    "videos": [
+      { "src": "/media/class-1.mp4", "poster": "/media/class-1.jpg", "caption": "Dribbling drills" },
+      { "src": "/media/class-6.mp4", "poster": "/media/class-6.jpg", "caption": "Agility ladder" },
+      { "src": "/media/class-3.mp4", "poster": "/media/class-3.jpg", "caption": "Ball control" },
+      { "src": "/media/class-4.mp4", "poster": "/media/class-4.jpg", "caption": "Passing practice" },
+      { "src": "/media/class-5.mp4", "poster": "/media/class-5.jpg", "caption": "Shooting on goal" },
+      { "src": "/media/class-8.mp4", "poster": "/media/class-8.jpg", "caption": "Footwork & ladder" },
+      { "src": "/media/class-2.mp4", "poster": "/media/class-2.jpg", "caption": "1v1 with coach" },
+      { "src": "/media/class-7.mp4", "poster": "/media/class-7.jpg", "caption": "Sprint to finish" }
+    ]
+  },
+  "schedule": {
+    "eyebrow": "Schedule 2026–2027",
+    "title": "Monday to Thursday",
+    "note": "Evening classes run 1 hour. Motor Skills groups (A–D) are 30 minutes, ages 2–4.",
+    "classes": [
+      { "program": "Motor Skills", "group": "A", "day": "Monday", "start": "08:00", "end": "08:30" },
+      { "program": "Motor Skills", "group": "B", "day": "Monday", "start": "08:30", "end": "09:00" },
+      { "program": "Movement & Play", "group": "", "day": "Monday", "start": "17:00", "end": "18:00" },
+      { "program": "Football Academy", "group": "", "day": "Monday", "start": "18:00", "end": "19:00" },
+      { "program": "Motor Skills", "group": "C", "day": "Tuesday", "start": "08:00", "end": "08:30" },
+      { "program": "Motor Skills", "group": "D", "day": "Tuesday", "start": "08:30", "end": "09:00" },
+      { "program": "Movement & Play", "group": "", "day": "Tuesday", "start": "17:00", "end": "18:00" },
+      { "program": "Soccer Academy", "group": "", "day": "Tuesday", "start": "18:00", "end": "19:00" },
+      { "program": "Motor Skills", "group": "A", "day": "Wednesday", "start": "08:00", "end": "08:30" },
+      { "program": "Motor Skills", "group": "B", "day": "Wednesday", "start": "08:30", "end": "09:00" },
+      { "program": "Movement & Play", "group": "", "day": "Wednesday", "start": "17:00", "end": "18:00" },
+      { "program": "Football Academy", "group": "", "day": "Wednesday", "start": "18:00", "end": "19:00" },
+      { "program": "Motor Skills", "group": "C", "day": "Thursday", "start": "08:00", "end": "08:30" },
+      { "program": "Motor Skills", "group": "D", "day": "Thursday", "start": "08:30", "end": "09:00" },
+      { "program": "Movement & Play", "group": "", "day": "Thursday", "start": "15:30", "end": "16:30" },
+      { "program": "Soccer Academy", "group": "", "day": "Thursday", "start": "17:00", "end": "18:00" }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Simple monthly membership",
+    "intro": "Choose how many classes per week. Membership renews automatically each month. Applies to Movement & Play, Sports Academy and Athletic Development.",
+    "plans": [
+      { "label": "1 class / week", "price": "$125", "period": "/mo", "featured": false },
+      { "label": "2 classes / week", "price": "$200", "period": "/mo", "featured": true },
+      { "label": "3+ classes / week", "price": "$250", "period": "/mo", "featured": false }
+    ],
+    "extras": [
+      { "title": "Registration · $150", "text": "One-time. Includes the required uniform: 1 pair of shorts, 2 shirts and 1 pair of socks." },
+      { "title": "Sibling discount", "text": "2nd child 10% off. 3rd child and up 25% off." },
+      { "title": "No membership", "text": "Pay-as-you-go: 1 class $150 · 2 classes $250 · 3 classes $300. No unlimited option." }
+    ],
+    "note": "Motor Skills (ages 2–4) is available 1x or 2x per week only, due to limited group size."
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Meet Coach Marcelo",
+    "photo": "/media/class-2.jpg",
+    "bio": "[Coach bio: background, coaching experience, why he started Flight Sports Academy.]\n\nOur philosophy is simple: retention over winning. A child who loves coming back keeps growing — in skill, in confidence and in character. Every class is designed so kids leave tired, proud and excited for the next one.",
+    "principles": [
+      { "title": "Fun keeps them coming", "text": "Games and challenges, not drills for drills' sake." },
+      { "title": "Structure builds discipline", "text": "Clear routines and respect in every session." }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Parents",
+    "title": "What families say",
+    "items": [
+      { "quote": "[Parent quote — what changed in their child since joining.]", "name": "[Parent name]", "detail": "Parent of a [age]-year-old" },
+      { "quote": "[Parent quote — a specific moment or result.]", "name": "[Parent name]", "detail": "Parent of a [age]-year-old" },
+      { "quote": "[Parent quote — why their child wants to come back.]", "name": "[Parent name]", "detail": "Parent of a [age]-year-old" }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      { "question": "What age can my child start?", "answer": "From age 2. Motor Skills is for ages 2–4, Movement & Play for younger kids, and sport-specific programs for ages 7+." },
+      { "question": "How does the trial class work?", "answer": "Pick the class you'd like to try below. We'll confirm by WhatsApp or phone and your child joins a regular session." },
+      { "question": "Is a uniform required?", "answer": "Yes. The uniform set is included with the $150 registration fee." },
+      { "question": "How do payments work?", "answer": "After the trial we send you a secure payment link. Memberships are billed automatically every month." },
+      { "question": "Do you offer sibling discounts?", "answer": "Yes — 10% off the 2nd child and 25% off the 3rd child and up." }
+    ]
+  },
+  "location": {
+    "eyebrow": "Location",
+    "title": "Where we train",
+    "venue": "Joy Holistic Education",
+    "address": "22864 Cielo Vista Dr",
+    "city": "San Antonio, TX",
+    "hours": "Classes Monday – Thursday",
+    "mapsQuery": "Joy Holistic Education 22864 Cielo Vista Dr San Antonio TX"
+  },
+  "trial": {
+    "eyebrow": "Book a trial",
+    "title": "Come try a class.",
+    "text": "Choose the class you'd like to try and we'll confirm within a day. Prefer to chat? Message us on WhatsApp.",
+    "successTitle": "Request received!",
+    "successText": "We'll contact you within 24 hours to confirm your trial class.",
+    "extraPrograms": ["Athletic Development", "Summer Camp"]
+  },
+  "footer": {
+    "text": "© 2026 Flight Sports Academy · San Antonio, TX"
+  }
+}

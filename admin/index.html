@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>FSA Admin</title>
+<link rel="icon" href="/img/icon-192.png">
+<link rel="stylesheet" href="/admin/assets/admin.css">
+</head>
+<body>
+
+<section id="login" class="login" hidden>
+  <form id="login-form" class="login-card">
+    <img src="/img/shield.jpg" alt="" width="64" height="78">
+    <h1>FSA Admin</h1>
+    <label>Password<input type="password" name="password" autocomplete="current-password" required autofocus></label>
+    <button type="submit" class="btn">Log in</button>
+    <p class="err" role="alert"></p>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <header class="bar">
+    <div class="bar-in">
+      <a href="/admin" class="brand"><img src="/img/shield.jpg" alt="" width="28" height="34">FSA Admin</a>
+      <nav class="tabs" role="tablist">
+        <button type="button" role="tab" data-tab="trials" aria-selected="true">Trial requests <span id="new-count" class="pill" hidden></span></button>
+        <button type="button" role="tab" data-tab="content" aria-selected="false">Edit website</button>
+      </nav>
+      <div class="bar-actions">
+        <a href="/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View site</a>
+        <button type="button" id="logout" class="btn btn-ghost btn-sm">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="tab-trials" class="tab">
+      <div class="head">
+        <h2>Trial requests</h2>
+        <div class="row">
+          <label class="inline">Show
+            <select id="status-filter">
+              <option value="">All</option>
+              <option value="new">New</option>
+              <option value="contacted">Contacted</option>
+              <option value="scheduled">Trial scheduled</option>
+              <option value="enrolled">Enrolled</option>
+              <option value="not-interested">Not interested</option>
+            </select>
+          </label>
+          <a href="/api/admin/trials.csv" class="btn btn-ghost btn-sm">Download CSV</a>
+        </div>
+      </div>
+      <div id="trials"></div>
+    </section>
+
+    <section id="tab-content" class="tab" hidden>
+      <div class="content-layout">
+        <nav id="section-nav" class="section-nav" aria-label="Sections"></nav>
+        <div id="editor" class="editor"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="savebar" class="savebar" hidden>
+    <span>You have unsaved changes</span>
+    <div class="row">
+      <button type="button" id="discard" class="btn btn-ghost btn-sm">Discard</button>
+      <button type="button" id="save" class="btn">Save &amp; publish</button>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script src="/admin/assets/admin.js"></script>
+</body>
+</html>
