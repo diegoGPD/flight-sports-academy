@@ -4,7 +4,7 @@ const multer = require('multer');
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
-const { renderPage } = require('./src/render');
+const { renderPage, LANGS } = require('./src/render');
 
 const PORT = process.env.PORT || 3000;
 const DATA_DIR = path.resolve(process.env.DATA_DIR || path.join(__dirname, 'data'));
@@ -37,10 +37,20 @@ function backupContent() {
   while (files.length > 30) fs.unlinkSync(path.join(dir, files.shift()));
 }
 
-let pageCache = null;
-function getPage() {
-  if (!pageCache) pageCache = renderPage(readJson(CONTENT_FILE));
-  return pageCache;
+// Migrate content saved by the first (English-only) version to the bilingual format.
+(function migrate() {
+  const c = readJson(CONTENT_FILE);
+  if (c.en && c.es) return;
+  fs.mkdirSync(path.join(DATA_DIR, 'backups'), { recursive: true });
+  fs.copyFileSync(CONTENT_FILE, path.join(DATA_DIR, 'backups', 'content-pre-bilingual.json'));
+  writeJson(CONTENT_FILE, readJson(path.join(__dirname, 'seed', 'content.json')));
+  console.log('[fsa] content migrated to bilingual format (old version kept in backups/)');
+})();
+
+let pageCache = {};
+function getPage(lang) {
+  if (!pageCache[lang]) pageCache[lang] = renderPage(readJson(CONTENT_FILE), lang);
+  return pageCache[lang];
 }
 
 // ---------- auth ----------
@@ -88,7 +98,11 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => {
   res.set('Cache-Control', 'public, max-age=60');
-  res.type('html').send(getPage());
+  res.type('html').send(getPage('en'));
+});
+app.get(['/es', '/es/'], (req, res) => {
+  res.set('Cache-Control', 'public, max-age=60');
+  res.type('html').send(getPage('es'));
 });
 
 app.get('/robots.txt', (req, res) => {
@@ -97,7 +111,9 @@ app.get('/robots.txt', (req, res) => {
 });
 app.get('/sitemap.xml', (req, res) => {
   const c = readJson(CONTENT_FILE);
-  res.type('application/xml').send(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${c.settings.siteUrl.replace(/\/$/, '')}/</loc></url></urlset>\n`);
+  const b = c.settings.siteUrl.replace(/\/$/, '');
+  const alt = `<xhtml:link rel="alternate" hreflang="en" href="${b}/"/><xhtml:link rel="alternate" hreflang="es" href="${b}/es"/>`;
+  res.type('application/xml').send(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>${b}/</loc>${alt}</url><url><loc>${b}/es</loc>${alt}</url></urlset>\n`);
 });
 
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: '7d', index: false }));
@@ -123,6 +139,7 @@ app.post('/api/trial', (req, res) => {
     program: clean(b.program, 80),
     classChoice: clean(b.classChoice, 120),
     notes: clean(b.notes, 1000),
+    language: b.lang === 'es' ? 'es' : 'en',
     adminNotes: ''
   };
   const errors = [];
@@ -130,7 +147,7 @@ app.post('/api/trial', (req, res) => {
   if (!entry.phone || entry.phone.replace(/\D/g, '').length < 7) errors.push('a valid phone');
   if (!entry.childAge || !/^\d{1,2}$/.test(entry.childAge)) errors.push("child's age");
   if (!entry.program) errors.push('a program');
-  if (errors.length) return res.status(400).json({ error: 'Please add ' + errors.join(', ') + '.' });
+  if (errors.length) return res.status(400).json({ error: entry.language === 'es' ? 'Por favor revisa: nombre, teléfono válido, edad y programa.' : 'Please add ' + errors.join(', ') + '.' });
 
   const trials = readJson(TRIALS_FILE);
   trials.unshift(entry);
@@ -175,11 +192,11 @@ app.get('/api/admin/me', requireAdmin, (req, res) => res.json({ ok: true }));
 app.get('/api/admin/content', requireAdmin, (req, res) => res.json(readJson(CONTENT_FILE)));
 app.put('/api/admin/content', requireAdmin, (req, res) => {
   const body = req.body;
-  if (!body || typeof body !== 'object' || !body.settings || !body.hero) return res.status(400).json({ error: 'Invalid content' });
-  try { renderPage(body); } catch (e) { return res.status(400).json({ error: 'Content could not be rendered: ' + e.message }); }
+  if (!body || typeof body !== 'object' || !body.settings || !body.en || !body.es) return res.status(400).json({ error: 'Invalid content' });
+  try { LANGS.forEach(l => renderPage(body, l)); } catch (e) { return res.status(400).json({ error: 'Content could not be rendered: ' + e.message }); }
   backupContent();
   writeJson(CONTENT_FILE, body);
-  pageCache = null;
+  pageCache = {};
   res.json({ ok: true });
 });
 
@@ -217,7 +234,7 @@ app.delete('/api/admin/trials/:id', requireAdmin, (req, res) => {
   res.json({ ok: true });
 });
 app.get('/api/admin/trials.csv', requireAdmin, (req, res) => {
-  const cols = ['createdAt', 'status', 'parentName', 'phone', 'email', 'childName', 'childAge', 'program', 'classChoice', 'notes', 'adminNotes'];
+  const cols = ['createdAt', 'status', 'language', 'parentName', 'phone', 'email', 'childName', 'childAge', 'program', 'classChoice', 'notes', 'adminNotes'];
   const esc = v => {
     let s = String(v ?? '');
     if (/^[=+\-@]/.test(s)) s = "'" + s; // block spreadsheet formula injection

@@ -1,6 +1,7 @@
 (function () {
   'use strict';
   var data = JSON.parse(document.getElementById('fsa-data').textContent);
+  var ui = data.ui;
   var form = document.getElementById('trial-form');
   var program = form.elements.program;
   var classSel = form.elements.classChoice;
@@ -17,9 +18,9 @@
     if (!program.value) { classWrap.hidden = true; classNone.hidden = true; return; }
     if (!list.length) { classWrap.hidden = true; classNone.hidden = false; return; }
     classNone.hidden = true; classWrap.hidden = false;
-    var any = new Option('Any time — help me choose', '');
+    var any = new Option(ui.formAnyTime, '');
     classSel.add(any);
-    list.forEach(function (c) { classSel.add(new Option(c.label, c.label)); });
+    list.forEach(function (c) { classSel.add(new Option(c.label, c.value)); });
     if (selected) classSel.value = selected;
   }
   program.addEventListener('change', function () { fillClasses(); });
@@ -48,12 +49,12 @@
       el.setAttribute('aria-invalid', bad ? 'true' : 'false');
       if (bad && !firstBad) firstBad = el;
     });
-    if (firstBad) { msg.textContent = 'Please fill in the highlighted fields.'; firstBad.focus(); return; }
+    if (firstBad) { msg.textContent = ui.formFill; firstBad.focus(); return; }
 
     var payload = {};
     new FormData(form).forEach(function (v, k) { payload[k] = v; });
     var btn = form.querySelector('button[type=submit]');
-    btn.disabled = true; btn.textContent = 'Sending…';
+    btn.disabled = true; btn.textContent = ui.formSending;
 
     fetch('/api/trial', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
       .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || 'Something went wrong'); return j; }); })
@@ -64,16 +65,18 @@
         done.hidden = false;
         var wa = document.getElementById('done-wa');
         if (wa && data.whatsapp) {
-          var text = 'Hi! I just requested a trial class at Flight Sports Academy.\n' +
-            'Parent: ' + payload.parentName + '\nChild: ' + (payload.childName || '') + ' (' + payload.childAge + ')\n' +
-            'Program: ' + payload.program + (payload.classChoice ? '\nClass: ' + payload.classChoice : '');
+          var progLabel = program.options[program.selectedIndex].text;
+          var classLabel = classSel.selectedIndex >= 0 && classSel.value ? classSel.options[classSel.selectedIndex].text : '';
+          var text = ui.waRequested + '\n' +
+            ui.waParent + ': ' + payload.parentName + '\n' + ui.waChild + ': ' + (payload.childName || '') + ' (' + payload.childAge + ')\n' +
+            ui.waProgram + ': ' + progLabel + (classLabel ? '\n' + ui.waClass + ': ' + classLabel : '');
           wa.href = 'https://wa.me/' + data.whatsapp + '?text=' + encodeURIComponent(text);
         }
         done.scrollIntoView({ behavior: 'smooth', block: 'center' });
       })
       .catch(function (err) {
-        msg.textContent = err.message;
-        btn.disabled = false; btn.textContent = 'Request my trial class';
+        msg.textContent = data.lang === 'en' ? err.message : ui.formError;
+        btn.disabled = false; btn.textContent = ui.formSubmit;
       });
   });
 

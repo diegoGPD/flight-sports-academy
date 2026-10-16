@@ -75,7 +75,7 @@
       box.append(h('article', { className: 'trial' + (t.status === 'new' ? ' is-new' : '') }, [
         h('div', {}, [
           h('h3', { text: (t.childName || 'Child') + ', ' + t.childAge + ' yrs' }),
-          h('div', { className: 'cls', text: t.program }),
+          h('div', { className: 'cls', text: t.program + (t.language === 'es' ? '  · ES' : '') }),
           h('div', { text: t.classChoice || 'Any time — needs help choosing' }),
           h('div', { className: 'meta', text: 'Received ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) })
         ]),
@@ -104,31 +104,36 @@
 
   // ---------- content editor ----------
   var SECTIONS = {
-    settings: ['Site settings', 'Contact numbers, links, Google Analytics and the background video at the top.'],
+    settings: ['Site settings', 'Contact numbers, links, Google Analytics, coach photo and the background video at the top.'],
+    schedule: ['Schedule & programs', 'Each class shows in the schedule table AND in the trial form, so parents can pick it. "Extra programs" appear in the form only (e.g. camps).'],
+    videos: ['Videos', 'Class videos. Upload vertical phone videos (MP4) and a cover image for each.'],
+    seo: ['Google title & description', 'What shows in Google results and when the link is shared.'],
     hero: ['Top banner', 'The first thing parents see.'],
-    mission: ['Mission', 'The red band with the quote.'],
+    mission: ['Mission', 'The red band.'],
     programs: ['Programs', 'The two age groups and their classes.'],
-    gallery: ['Videos', 'Class videos. Upload vertical phone videos (MP4) and a cover image for each.'],
-    schedule: ['Schedule', 'Each class shows in the schedule table AND in the trial form, so parents can pick it.'],
+    gallery: ['Videos section titles', ''],
     pricing: ['Pricing', ''],
-    about: ['About / Coach', 'Leave an empty line between paragraphs in the bio.'],
+    about: ['Coach / About', 'Leave an empty line between paragraphs in the bio.'],
     testimonials: ['Testimonials', 'Parent quotes.'],
     faq: ['FAQ', ''],
     location: ['Location', ''],
-    trial: ['Trial form', '"Extra programs" appear in the form even if they are not on the schedule (e.g. camps).'],
-    footer: ['Footer', '']
+    trial: ['Trial form', ''],
+    footer: ['Footer', ''],
+    ui: ['Buttons & labels', 'Small texts used across the page: menu, buttons, form labels.']
   };
+  var GROUPS = [['Both languages', ['settings', 'schedule', 'videos']], ['English', 'en'], ['Español', 'es']];
   var LABELS = {
-    siteTitle: 'Browser tab / Google title', metaDescription: 'Google description', siteUrl: 'Website address (https://…)', googleAnalyticsId: 'Google Analytics ID (G-XXXXXXX)',
+    metaDescription: 'Google description', siteUrl: 'Website address (https://…)', googleAnalyticsId: 'Google Analytics ID (G-XXXXXXX)',
     whatsappNumber: 'WhatsApp number (with country code, e.g. 12105551234)', instagramUrl: 'Instagram link', contactEmail: 'Contact email',
-    heroVideo: 'Background video', heroPoster: 'Background video cover image', quoteSpanish: 'Quote (Spanish)', ages: 'Age range',
+    heroVideo: 'Background video', heroPoster: 'Background video cover image', coachPhoto: 'Coach photo', ages: 'Age range', agesLabel: 'Text under age range',
     tag: 'Small tag (optional)', src: 'Video file', poster: 'Cover image', group: 'Group (A, B…) optional', start: 'Starts', end: 'Ends',
-    featured: 'Highlight this plan', extraPrograms: 'Extra programs (form only)', mapsQuery: 'Google Maps search text',
-    successTitle: 'Message after sending (title)', successText: 'Message after sending (text)', button: 'Button text',
+    program: 'Program name (English)', programEs: 'Program name (Español)', caption: 'Caption (English)', captionEs: 'Caption (Español)',
+    featured: 'Highlight this plan', extraPrograms: 'Extra programs (form only)', mapsQuery: 'Google Maps search text', statement: 'Mission statement',
+    successTitle: 'Message after sending (title)', successText: 'Message after sending (text)', button: 'Button text', partners: 'Partner schools line',
     primaryButton: 'Main button text', secondaryButton: 'Second button text', bio: 'Bio', question: 'Question', answer: 'Answer'
   };
-  var LONG = /^(text|bio|quote|quoteSpanish|answer|subtitle|intro|metaDescription|note|successText|title)$/;
-  var MEDIA = /^(src|poster|photo|heroVideo|heroPoster)$/;
+  var LONG = /^(text|bio|quote|answer|subtitle|intro|description|note|successText|title|statement|partners)$/;
+  var MEDIA = /^(src|poster|photo|heroVideo|heroPoster|coachPhoto)$/;
   var DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
   var saved = null, draft = null;
@@ -147,13 +152,22 @@
   function renderEditor() {
     var ed = document.getElementById('editor'), nav = document.getElementById('section-nav');
     ed.replaceChildren(); nav.replaceChildren();
-    Object.keys(draft).forEach(function (key) {
-      var meta = SECTIONS[key] || [label(key), ''];
-      nav.append(h('a', { href: '#sec-' + key, text: meta[0] }));
-      ed.append(h('section', { className: 'sec', id: 'sec-' + key }, [
-        h('h3', { text: meta[0] }), meta[1] ? h('p', { className: 'hint', text: meta[1] }) : null,
-        objectFields(draft[key])
-      ]));
+    GROUPS.forEach(function (g) {
+      var parent = Array.isArray(g[1]) ? draft : draft[g[1]];
+      var keys = Array.isArray(g[1]) ? g[1] : Object.keys(parent || {});
+      if (!parent) return;
+      nav.append(h('div', { className: 'nav-group', text: g[0] }));
+      ed.append(h('h2', { className: 'group-title', text: g[0] }));
+      keys.forEach(function (key) {
+        if (!(key in parent)) return;
+        var meta = (!Array.isArray(g[1]) && key === 'schedule') ? ['Schedule titles', 'Classes and times are edited once, under "Both languages".'] : (SECTIONS[key] || [label(key), '']);
+        var id = 'sec-' + (Array.isArray(g[1]) ? '' : g[1] + '-') + key;
+        nav.append(h('a', { href: '#' + id, text: meta[0] }));
+        ed.append(h('section', { className: 'sec', id: id }, [
+          h('h3', { text: meta[0] + (Array.isArray(g[1]) ? '' : ' · ' + g[0]) }), meta[1] ? h('p', { className: 'hint', text: meta[1] }) : null,
+          Array.isArray(parent[key]) ? listEditor(parent, key) : objectFields(parent[key])
+        ]));
+      });
     });
   }
 

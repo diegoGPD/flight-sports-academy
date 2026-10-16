@@ -1,160 +1,376 @@
 {
   "settings": {
-    "siteTitle": "Flight Sports Academy | Youth Sports in San Antonio, TX",
-    "metaDescription": "Youth sports academy in San Antonio, TX. Motor development for ages 2–6 and soccer, flag football and athletic training for ages 7+. Book a trial class.",
     "siteUrl": "https://www.flightsportsacademy.com",
     "googleAnalyticsId": "",
     "whatsappNumber": "",
     "instagramUrl": "",
     "contactEmail": "",
     "heroVideo": "/media/hero-loop.mp4",
-    "heroPoster": "/media/hero-loop.jpg"
-  },
-  "hero": {
-    "eyebrow": "Youth sports academy · San Antonio, TX",
-    "title": "Kids who can't wait to come back tomorrow.",
-    "subtitle": "We build confident, resilient, kind and disciplined kids through sport — from first steps in motor skills at age 2 to sport-specific training in soccer and flag football.",
-    "primaryButton": "Book a trial class",
-    "secondaryButton": "See programs",
-    "stats": [
-      { "value": "Ages 2+", "label": "Programs by age" },
-      { "value": "Mon–Thu", "label": "Morning & evening classes" },
-      { "value": "1 year", "label": "Training San Antonio kids" }
-    ]
-  },
-  "mission": {
-    "quote": "Success isn't measured by how many goals kids score. It's measured by how many kids want to come back tomorrow.",
-    "quoteSpanish": "El éxito de hoy no se mide por cuántos goles anotaron los niños. Se mide por cuántos niños quieren volver mañana.",
-    "pillars": ["Confident", "Resilient", "Kind", "Disciplined"]
-  },
-  "programs": {
-    "eyebrow": "Programs",
-    "title": "Two paths. One way of training.",
-    "tracks": [
-      {
-        "ages": "2–6",
-        "headline": "Specialists in motor development and sport fundamentals",
-        "text": "Fun first. Kids build coordination, balance and body confidence through games — and learn to listen, take turns and try again.",
-        "button": "Book a trial · ages 2–6",
-        "items": [
-          { "name": "Motor Skills", "tag": "ages 2–4", "text": "Small morning groups focused on movement foundations. 1x or 2x per week; limited spots." },
-          { "name": "Movement & Play", "tag": "", "text": "Plyometrics, hand-eye coordination games and bodyweight work. Fun, dynamic, and it keeps kids wanting more." }
-        ]
-      },
-      {
-        "ages": "7+",
-        "headline": "Specialized training by sport",
-        "text": "Results-focused coaching for kids who want to get better at their sport and compete — with the same focus on discipline and teamwork.",
-        "button": "Book a trial · ages 7+",
-        "items": [
-          { "name": "Soccer Academy", "tag": "", "text": "Technique, game sense and match play." },
-          { "name": "Football Academy", "tag": "flag football", "text": "Routes, throwing, flag pulling and team plays." },
-          { "name": "Athletic Development", "tag": "", "text": "High-intensity work with rest to build explosiveness, strength and conditioning. For kids serious about sports." },
-          { "name": "Summer Camp", "tag": "June & July", "text": "Seasonal camps with multi-sport training." }
-        ]
-      }
-    ]
-  },
-  "gallery": {
-    "eyebrow": "Inside a class",
-    "title": "See them train",
-    "videos": [
-      { "src": "/media/class-1.mp4", "poster": "/media/class-1.jpg", "caption": "Dribbling drills" },
-      { "src": "/media/class-6.mp4", "poster": "/media/class-6.jpg", "caption": "Agility ladder" },
-      { "src": "/media/class-3.mp4", "poster": "/media/class-3.jpg", "caption": "Ball control" },
-      { "src": "/media/class-4.mp4", "poster": "/media/class-4.jpg", "caption": "Passing practice" },
-      { "src": "/media/class-5.mp4", "poster": "/media/class-5.jpg", "caption": "Shooting on goal" },
-      { "src": "/media/class-8.mp4", "poster": "/media/class-8.jpg", "caption": "Footwork & ladder" },
-      { "src": "/media/class-2.mp4", "poster": "/media/class-2.jpg", "caption": "1v1 with coach" },
-      { "src": "/media/class-7.mp4", "poster": "/media/class-7.jpg", "caption": "Sprint to finish" }
-    ]
+    "heroPoster": "/media/hero-loop.jpg",
+    "coachPhoto": "/media/class-2.jpg"
   },
   "schedule": {
-    "eyebrow": "Schedule 2026–2027",
-    "title": "Monday to Thursday",
-    "note": "Evening classes run 1 hour. Motor Skills groups (A–D) are 30 minutes, ages 2–4.",
     "classes": [
-      { "program": "Motor Skills", "group": "A", "day": "Monday", "start": "08:00", "end": "08:30" },
-      { "program": "Motor Skills", "group": "B", "day": "Monday", "start": "08:30", "end": "09:00" },
-      { "program": "Movement & Play", "group": "", "day": "Monday", "start": "17:00", "end": "18:00" },
-      { "program": "Football Academy", "group": "", "day": "Monday", "start": "18:00", "end": "19:00" },
-      { "program": "Motor Skills", "group": "C", "day": "Tuesday", "start": "08:00", "end": "08:30" },
-      { "program": "Motor Skills", "group": "D", "day": "Tuesday", "start": "08:30", "end": "09:00" },
-      { "program": "Movement & Play", "group": "", "day": "Tuesday", "start": "17:00", "end": "18:00" },
-      { "program": "Soccer Academy", "group": "", "day": "Tuesday", "start": "18:00", "end": "19:00" },
-      { "program": "Motor Skills", "group": "A", "day": "Wednesday", "start": "08:00", "end": "08:30" },
-      { "program": "Motor Skills", "group": "B", "day": "Wednesday", "start": "08:30", "end": "09:00" },
-      { "program": "Movement & Play", "group": "", "day": "Wednesday", "start": "17:00", "end": "18:00" },
-      { "program": "Football Academy", "group": "", "day": "Wednesday", "start": "18:00", "end": "19:00" },
-      { "program": "Motor Skills", "group": "C", "day": "Thursday", "start": "08:00", "end": "08:30" },
-      { "program": "Motor Skills", "group": "D", "day": "Thursday", "start": "08:30", "end": "09:00" },
-      { "program": "Movement & Play", "group": "", "day": "Thursday", "start": "15:30", "end": "16:30" },
-      { "program": "Soccer Academy", "group": "", "day": "Thursday", "start": "17:00", "end": "18:00" }
-    ]
-  },
-  "pricing": {
-    "eyebrow": "Pricing",
-    "title": "Simple monthly membership",
-    "intro": "Choose how many classes per week. Membership renews automatically each month. Applies to Movement & Play, Sports Academy and Athletic Development.",
-    "plans": [
-      { "label": "1 class / week", "price": "$125", "period": "/mo", "featured": false },
-      { "label": "2 classes / week", "price": "$200", "period": "/mo", "featured": true },
-      { "label": "3+ classes / week", "price": "$250", "period": "/mo", "featured": false }
+      { "program": "Motor Skills", "programEs": "Habilidades Motrices", "group": "A", "day": "Monday", "start": "08:00", "end": "08:30" },
+      { "program": "Motor Skills", "programEs": "Habilidades Motrices", "group": "B", "day": "Monday", "start": "08:30", "end": "09:00" },
+      { "program": "Movement & Play", "programEs": "Movimiento y Juego", "group": "", "day": "Monday", "start": "17:00", "end": "18:00" },
+      { "program": "Football Academy", "programEs": "Academia de Fútbol Americano", "group": "", "day": "Monday", "start": "18:00", "end": "19:00" },
+      { "program": "Motor Skills", "programEs": "Habilidades Motrices", "group": "C", "day": "Tuesday", "start": "08:00", "end": "08:30" },
+      { "program": "Motor Skills", "programEs": "Habilidades Motrices", "group": "D", "day": "Tuesday", "start": "08:30", "end": "09:00" },
+      { "program": "Movement & Play", "programEs": "Movimiento y Juego", "group": "", "day": "Tuesday", "start": "17:00", "end": "18:00" },
+      { "program": "Soccer Academy", "programEs": "Academia de Fútbol", "group": "", "day": "Tuesday", "start": "18:00", "end": "19:00" },
+      { "program": "Motor Skills", "programEs": "Habilidades Motrices", "group": "A", "day": "Wednesday", "start": "08:00", "end": "08:30" },
+      { "program": "Motor Skills", "programEs": "Habilidades Motrices", "group": "B", "day": "Wednesday", "start": "08:30", "end": "09:00" },
+      { "program": "Movement & Play", "programEs": "Movimiento y Juego", "group": "", "day": "Wednesday", "start": "17:00", "end": "18:00" },
+      { "program": "Football Academy", "programEs": "Academia de Fútbol Americano", "group": "", "day": "Wednesday", "start": "18:00", "end": "19:00" },
+      { "program": "Motor Skills", "programEs": "Habilidades Motrices", "group": "C", "day": "Thursday", "start": "08:00", "end": "08:30" },
+      { "program": "Motor Skills", "programEs": "Habilidades Motrices", "group": "D", "day": "Thursday", "start": "08:30", "end": "09:00" },
+      { "program": "Movement & Play", "programEs": "Movimiento y Juego", "group": "", "day": "Thursday", "start": "15:30", "end": "16:30" },
+      { "program": "Soccer Academy", "programEs": "Academia de Fútbol", "group": "", "day": "Thursday", "start": "17:00", "end": "18:00" }
     ],
-    "extras": [
-      { "title": "Registration · $150", "text": "One-time. Includes the required uniform: 1 pair of shorts, 2 shirts and 1 pair of socks." },
-      { "title": "Sibling discount", "text": "2nd child 10% off. 3rd child and up 25% off." },
-      { "title": "No membership", "text": "Pay-as-you-go: 1 class $150 · 2 classes $250 · 3 classes $300. No unlimited option." }
-    ],
-    "note": "Motor Skills (ages 2–4) is available 1x or 2x per week only, due to limited group size."
-  },
-  "about": {
-    "eyebrow": "About",
-    "title": "Meet Coach Marcelo",
-    "photo": "/media/class-2.jpg",
-    "bio": "[Coach bio: background, coaching experience, why he started Flight Sports Academy.]\n\nOur philosophy is simple: retention over winning. A child who loves coming back keeps growing — in skill, in confidence and in character. Every class is designed so kids leave tired, proud and excited for the next one.",
-    "principles": [
-      { "title": "Fun keeps them coming", "text": "Games and challenges, not drills for drills' sake." },
-      { "title": "Structure builds discipline", "text": "Clear routines and respect in every session." }
+    "extraPrograms": [
+      { "program": "Athletic Development", "programEs": "Desarrollo Atlético" },
+      { "program": "Summer Camp", "programEs": "Campamento de Verano" }
     ]
   },
-  "testimonials": {
-    "eyebrow": "Parents",
-    "title": "What families say",
-    "items": [
-      { "quote": "[Parent quote — what changed in their child since joining.]", "name": "[Parent name]", "detail": "Parent of a [age]-year-old" },
-      { "quote": "[Parent quote — a specific moment or result.]", "name": "[Parent name]", "detail": "Parent of a [age]-year-old" },
-      { "quote": "[Parent quote — why their child wants to come back.]", "name": "[Parent name]", "detail": "Parent of a [age]-year-old" }
-    ]
+  "videos": [
+    { "src": "/media/class-1.mp4", "poster": "/media/class-1.jpg", "caption": "Dribbling drills", "captionEs": "Ejercicios de conducción" },
+    { "src": "/media/class-6.mp4", "poster": "/media/class-6.jpg", "caption": "Agility ladder", "captionEs": "Escalera de agilidad" },
+    { "src": "/media/class-3.mp4", "poster": "/media/class-3.jpg", "caption": "Ball control", "captionEs": "Control de balón" },
+    { "src": "/media/class-4.mp4", "poster": "/media/class-4.jpg", "caption": "Passing practice", "captionEs": "Práctica de pases" },
+    { "src": "/media/class-5.mp4", "poster": "/media/class-5.jpg", "caption": "Shooting on goal", "captionEs": "Tiro a gol" },
+    { "src": "/media/class-8.mp4", "poster": "/media/class-8.jpg", "caption": "Footwork & ladder", "captionEs": "Juego de pies y escalera" },
+    { "src": "/media/class-2.mp4", "poster": "/media/class-2.jpg", "caption": "1v1 with coach", "captionEs": "1 vs 1 con el coach" },
+    { "src": "/media/class-7.mp4", "poster": "/media/class-7.jpg", "caption": "Sprint to finish", "captionEs": "Sprint final" }
+  ],
+  "en": {
+    "seo": {
+      "title": "Flight Sports Academy | Youth Sports in San Antonio, TX",
+      "description": "Youth sports academy in San Antonio, TX. Motor development for ages 2–6 and soccer, flag football and athletic training for ages 7+. Book a trial class."
+    },
+    "hero": {
+      "eyebrow": "Youth sports academy · San Antonio, TX",
+      "title": "Kids who can't wait to come back tomorrow.",
+      "subtitle": "We develop and empower kids to become the best version of themselves through sport — from first steps in motor skills at age 2 to sport-specific training in soccer and flag football.",
+      "primaryButton": "Book a trial class",
+      "secondaryButton": "See programs",
+      "stats": [
+        { "value": "Ages 2+", "label": "Programs by age" },
+        { "value": "Mon–Thu", "label": "Morning & evening classes" },
+        { "value": "Since 2012", "label": "Coaching kids" }
+      ]
+    },
+    "mission": {
+      "eyebrow": "Our mission",
+      "statement": "To develop and empower students to become a better version of themselves.",
+      "quote": "Success isn't measured by how many goals kids score. It's measured by how many kids want to come back tomorrow.",
+      "pillars": ["Confident", "Resilient", "Kind", "Disciplined"]
+    },
+    "programs": {
+      "eyebrow": "Programs",
+      "title": "Two paths. One way of training.",
+      "tracks": [
+        {
+          "ages": "2–6",
+          "agesLabel": "Years old",
+          "headline": "Specialists in motor development and sport fundamentals",
+          "text": "Fun first. Kids build coordination, balance and body confidence through games — and learn to listen, take turns and try again.",
+          "button": "Book a trial · ages 2–6",
+          "items": [
+            { "name": "Motor Skills", "tag": "ages 2–4", "text": "Small morning groups focused on movement foundations. 1x or 2x per week; limited spots." },
+            { "name": "Movement & Play", "tag": "", "text": "Plyometrics, hand-eye coordination games and bodyweight work. Fun, dynamic, and it keeps kids wanting more." }
+          ]
+        },
+        {
+          "ages": "7+",
+          "agesLabel": "Years old",
+          "headline": "Specialized training by sport",
+          "text": "Results-focused coaching for kids who want to get better at their sport and compete — with the same focus on discipline and teamwork.",
+          "button": "Book a trial · ages 7+",
+          "items": [
+            { "name": "Soccer Academy", "tag": "", "text": "Technique, game sense and match play." },
+            { "name": "Football Academy", "tag": "flag football", "text": "Routes, throwing, flag pulling and team plays." },
+            { "name": "Athletic Development", "tag": "", "text": "High-intensity work with rest to build explosiveness, strength and conditioning. For kids serious about sports." },
+            { "name": "Summer Camp", "tag": "June & July", "text": "Seasonal camps with multi-sport training." }
+          ]
+        }
+      ]
+    },
+    "gallery": { "eyebrow": "Inside a class", "title": "See them train" },
+    "schedule": {
+      "eyebrow": "Schedule 2026–2027",
+      "title": "Monday to Thursday",
+      "note": "Evening classes run 1 hour. Motor Skills groups (A–D) are 30 minutes, ages 2–4."
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "Simple monthly membership",
+      "intro": "Choose how many classes per week. Membership renews automatically each month. Applies to Movement & Play, Sports Academy and Athletic Development.",
+      "plans": [
+        { "label": "1 class / week", "price": "$125", "period": "/mo", "featured": false },
+        { "label": "2 classes / week", "price": "$200", "period": "/mo", "featured": true },
+        { "label": "3+ classes / week", "price": "$250", "period": "/mo", "featured": false }
+      ],
+      "extras": [
+        { "title": "Registration · $150", "text": "One-time. Includes the required uniform: 1 pair of shorts, 2 shirts and 1 pair of socks." },
+        { "title": "Sibling discount", "text": "2nd child 10% off. 3rd child and up 25% off." },
+        { "title": "No membership", "text": "Pay-as-you-go: 1 class $150 · 2 classes $250 · 3 classes $300. No unlimited option." }
+      ],
+      "note": "Motor Skills (ages 2–4) is available 1x or 2x per week only, due to limited group size."
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "Coach Marcelo Rodríguez",
+      "bio": "Coach Marcelo has had sports in his blood since he was 2 years old, when he started playing soccer. At 5 he added Kung Fu, and at 6, gymnastics — training all three at once for years. In Kung Fu he won 5 national championships and 2 international championships, all first place. In soccer, he was Tamaulipas' top scorer twice.\n\nIn middle and high school he competed in swimming, soccer, football, and track — state champion in butterfly (25m, 50m, 100m), district soccer champion all 4 years of high school, district football champion 2 years, and state champion in the 40m twice. In 2015 he took part in an NFL Combine pursuing a shot at the NFL.\n\nHe started coaching in 2012 with a group of 7-year-olds. In 2023, what began as a favor — volunteering to help a soccer team at Montessori School of San Antonio after the head coach resigned — turned into the start of something bigger: that team finished the season undefeated. He returned the following year with the same group, now split into two teams: one finished undefeated, the other reached the final without losing a single game all season. From there he went on to coach football and basketball at the same school.\n\nThat's when Coach Marcelo realized what he really wanted to do: help children develop, physically and mentally, so they can achieve their goals on and off the field. That's how Flight Sports Academy was born. Today he works hand in hand with Montessori School of San Antonio and Joy Holistic Education in developing their students.",
+      "highlights": [
+        { "value": "5×", "label": "National Kung Fu champion" },
+        { "value": "2×", "label": "International Kung Fu champion" },
+        { "value": "2015", "label": "NFL Combine" },
+        { "value": "2012", "label": "Coaching kids since" }
+      ],
+      "partners": "Working with Montessori School of San Antonio and Joy Holistic Education",
+      "principles": [
+        { "title": "Fun keeps them coming", "text": "Games and challenges, not drills for drills' sake." },
+        { "title": "Structure builds discipline", "text": "Clear routines and respect in every session." }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Parents",
+      "title": "What families say",
+      "items": [
+        { "quote": "[Parent quote — what changed in their child since joining.]", "name": "[Parent name]", "detail": "Parent of a [age]-year-old" },
+        { "quote": "[Parent quote — a specific moment or result.]", "name": "[Parent name]", "detail": "Parent of a [age]-year-old" },
+        { "quote": "[Parent quote — why their child wants to come back.]", "name": "[Parent name]", "detail": "Parent of a [age]-year-old" }
+      ]
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": [
+        { "question": "What age can my child start?", "answer": "From age 2. Motor Skills is for ages 2–4, Movement & Play for younger kids, and sport-specific programs for ages 7+." },
+        { "question": "How does the trial class work?", "answer": "Pick the class you'd like to try below. We'll confirm by WhatsApp or phone and your child joins a regular session." },
+        { "question": "Is a uniform required?", "answer": "Yes. The uniform set is included with the $150 registration fee." },
+        { "question": "How do payments work?", "answer": "After the trial we send you a secure payment link. Memberships are billed automatically every month." },
+        { "question": "Do you offer sibling discounts?", "answer": "Yes — 10% off the 2nd child and 25% off the 3rd child and up." }
+      ]
+    },
+    "location": {
+      "eyebrow": "Location",
+      "title": "Where we train",
+      "venue": "Joy Holistic Education",
+      "address": "22864 Cielo Vista Dr",
+      "city": "San Antonio, TX",
+      "hours": "Classes Monday – Thursday",
+      "mapsQuery": "Joy Holistic Education 22864 Cielo Vista Dr San Antonio TX"
+    },
+    "trial": {
+      "eyebrow": "Book a trial",
+      "title": "Come try a class.",
+      "text": "Choose the class you'd like to try and we'll confirm within a day. Prefer to chat? Message us on WhatsApp.",
+      "successTitle": "Request received!",
+      "successText": "We'll contact you within 24 hours to confirm your trial class."
+    },
+    "footer": { "text": "© 2026 Flight Sports Academy · San Antonio, TX" },
+    "ui": {
+      "skip": "Skip to content",
+      "languageSwitch": "Español",
+      "navPrograms": "Programs", "navVideos": "Videos", "navSchedule": "Schedule", "navPricing": "Pricing", "navAbout": "About", "navLocation": "Location",
+      "bookTrial": "Book a trial",
+      "videoCta": "Book a trial class",
+      "playVideo": "Play video",
+      "closeVideo": "Close video",
+      "scheduleTime": "Time",
+      "scheduleCta": "Pick a class for your trial",
+      "scheduleTap": "Tap any class to request a trial for it.",
+      "group": "Group",
+      "pricingCta": "Start with a trial class",
+      "aboutCta": "Train with us",
+      "getDirections": "Get directions",
+      "whatsappButton": "Message us on WhatsApp",
+      "formParent": "Parent name",
+      "formPhone": "Phone / WhatsApp",
+      "formEmail": "Email",
+      "formChild": "Child's first name",
+      "formAge": "Child's age",
+      "formProgram": "Program",
+      "formChooseProgram": "Choose a program",
+      "formClass": "Which class would you like to try?",
+      "formAnyTime": "Any time — help me choose",
+      "formNoClasses": "We'll contact you with available times for this program.",
+      "formNotes": "Anything we should know?",
+      "optional": "(optional)",
+      "formSubmit": "Request my trial class",
+      "formSending": "Sending…",
+      "formFill": "Please fill in the highlighted fields.",
+      "formError": "Something went wrong. Please try again or message us on WhatsApp.",
+      "sendWhatsapp": "Also send it on WhatsApp",
+      "waHello": "Hi! I'd like to book a trial class at Flight Sports Academy.",
+      "waRequested": "Hi! I just requested a trial class at Flight Sports Academy.",
+      "waParent": "Parent", "waChild": "Child", "waProgram": "Program", "waClass": "Class"
+    }
   },
-  "faq": {
-    "title": "FAQ",
-    "items": [
-      { "question": "What age can my child start?", "answer": "From age 2. Motor Skills is for ages 2–4, Movement & Play for younger kids, and sport-specific programs for ages 7+." },
-      { "question": "How does the trial class work?", "answer": "Pick the class you'd like to try below. We'll confirm by WhatsApp or phone and your child joins a regular session." },
-      { "question": "Is a uniform required?", "answer": "Yes. The uniform set is included with the $150 registration fee." },
-      { "question": "How do payments work?", "answer": "After the trial we send you a secure payment link. Memberships are billed automatically every month." },
-      { "question": "Do you offer sibling discounts?", "answer": "Yes — 10% off the 2nd child and 25% off the 3rd child and up." }
-    ]
-  },
-  "location": {
-    "eyebrow": "Location",
-    "title": "Where we train",
-    "venue": "Joy Holistic Education",
-    "address": "22864 Cielo Vista Dr",
-    "city": "San Antonio, TX",
-    "hours": "Classes Monday – Thursday",
-    "mapsQuery": "Joy Holistic Education 22864 Cielo Vista Dr San Antonio TX"
-  },
-  "trial": {
-    "eyebrow": "Book a trial",
-    "title": "Come try a class.",
-    "text": "Choose the class you'd like to try and we'll confirm within a day. Prefer to chat? Message us on WhatsApp.",
-    "successTitle": "Request received!",
-    "successText": "We'll contact you within 24 hours to confirm your trial class.",
-    "extraPrograms": ["Athletic Development", "Summer Camp"]
-  },
-  "footer": {
-    "text": "© 2026 Flight Sports Academy · San Antonio, TX"
+  "es": {
+    "seo": {
+      "title": "Flight Sports Academy | Academia deportiva infantil en San Antonio, TX",
+      "description": "Academia deportiva infantil en San Antonio, TX. Desarrollo motriz de 2 a 6 años y fútbol, fútbol americano flag y entrenamiento atlético de 7 años en adelante. Agenda una clase de prueba."
+    },
+    "hero": {
+      "eyebrow": "Academia deportiva infantil · San Antonio, TX",
+      "title": "Niños que no ven la hora de volver mañana.",
+      "subtitle": "Desarrollamos y empoderamos a los niños para que sean la mejor versión de sí mismos a través del deporte — desde sus primeros pasos en habilidades motrices a los 2 años hasta entrenamiento especializado en fútbol y fútbol americano flag.",
+      "primaryButton": "Agenda una clase de prueba",
+      "secondaryButton": "Ver programas",
+      "stats": [
+        { "value": "2+ años", "label": "Programas por edad" },
+        { "value": "Lun–Jue", "label": "Clases de mañana y tarde" },
+        { "value": "Desde 2012", "label": "Entrenando niños" }
+      ]
+    },
+    "mission": {
+      "eyebrow": "Nuestra misión",
+      "statement": "Desarrollar y empoderar a los estudiantes a convertirse en su mejor versión de sí mismos.",
+      "quote": "El éxito de hoy no se mide por cuántos goles anotaron los niños. Se mide por cuántos niños quieren volver mañana.",
+      "pillars": ["Seguros", "Resilientes", "Amables", "Disciplinados"]
+    },
+    "programs": {
+      "eyebrow": "Programas",
+      "title": "Dos caminos. Una forma de entrenar.",
+      "tracks": [
+        {
+          "ages": "2–6",
+          "agesLabel": "Años",
+          "headline": "Especialistas en desarrollo motriz y fundamentos del deporte",
+          "text": "Primero la diversión. Los niños desarrollan coordinación, equilibrio y confianza en su cuerpo a través de juegos — y aprenden a escuchar, a esperar su turno y a volver a intentar.",
+          "button": "Clase de prueba · 2–6 años",
+          "items": [
+            { "name": "Habilidades Motrices", "tag": "2–4 años", "text": "Grupos pequeños por la mañana enfocados en las bases del movimiento. 1 o 2 veces por semana; cupo limitado." },
+            { "name": "Movimiento y Juego", "tag": "", "text": "Pliometría, juegos de coordinación ojo-mano y ejercicios con peso corporal. Divertida, dinámica, y los deja con ganas de más." }
+          ]
+        },
+        {
+          "ages": "7+",
+          "agesLabel": "Años",
+          "headline": "Entrenamiento especializado por deporte",
+          "text": "Entrenamiento enfocado en resultados para niños que quieren mejorar en su deporte y competir — con el mismo enfoque en disciplina y trabajo en equipo.",
+          "button": "Clase de prueba · 7+ años",
+          "items": [
+            { "name": "Academia de Fútbol", "tag": "", "text": "Técnica, lectura de juego y partidos." },
+            { "name": "Academia de Fútbol Americano", "tag": "flag", "text": "Rutas, pases, quitar banderas y jugadas en equipo." },
+            { "name": "Desarrollo Atlético", "tag": "", "text": "Trabajo de alta intensidad con descansos para desarrollar explosividad, fuerza y condición física. Para niños que van en serio con el deporte." },
+            { "name": "Campamento de Verano", "tag": "junio y julio", "text": "Campamentos de temporada con entrenamiento multideporte." }
+          ]
+        }
+      ]
+    },
+    "gallery": { "eyebrow": "Así son las clases", "title": "Míralos entrenar" },
+    "schedule": {
+      "eyebrow": "Horario 2026–2027",
+      "title": "Lunes a jueves",
+      "note": "Las clases de la tarde duran 1 hora. Los grupos de Habilidades Motrices (A–D) son de 30 minutos, de 2 a 4 años."
+    },
+    "pricing": {
+      "eyebrow": "Precios",
+      "title": "Membresía mensual sencilla",
+      "intro": "Elige cuántas clases por semana. La membresía se renueva automáticamente cada mes. Aplica para Movimiento y Juego, Academia Deportiva y Desarrollo Atlético.",
+      "plans": [
+        { "label": "1 clase / semana", "price": "$125", "period": "/mes", "featured": false },
+        { "label": "2 clases / semana", "price": "$200", "period": "/mes", "featured": true },
+        { "label": "3+ clases / semana", "price": "$250", "period": "/mes", "featured": false }
+      ],
+      "extras": [
+        { "title": "Inscripción · $150", "text": "Pago único. Incluye el uniforme obligatorio: 1 short, 2 playeras y 1 par de calcetas." },
+        { "title": "Descuento por hermanos", "text": "2do hijo 10% de descuento. 3er hijo en adelante 25% de descuento." },
+        { "title": "Sin membresía", "text": "Pago por clases: 1 clase $150 · 2 clases $250 · 3 clases $300. Sin opción ilimitada." }
+      ],
+      "note": "Habilidades Motrices (2–4 años) solo está disponible 1 o 2 veces por semana, por el tamaño limitado de los grupos."
+    },
+    "about": {
+      "eyebrow": "Quiénes somos",
+      "title": "Coach Marcelo Rodríguez",
+      "bio": "Coach Marcelo lleva el deporte en la sangre desde los 2 años, cuando empezó a jugar fútbol. A los 5 sumó Kung Fu, y a los 6, gimnasia — entrenando los tres a la par durante años. En Kung Fu ganó 5 campeonatos nacionales y 2 campeonatos internacionales, todos en primer lugar. En fútbol fue campeón de goleo de Tamaulipas en dos ocasiones.\n\nEn la secundaria y preparatoria compitió en natación, fútbol, fútbol americano y atletismo — campeón estatal de mariposa (25m, 50m, 100m), campeón distrital de fútbol los 4 años de prepa, campeón distrital de fútbol americano 2 años, y campeón estatal de 40m dos veces. En 2015 participó en un NFL Combine buscando llegar a la NFL.\n\nEmpezó a entrenar en 2012 con un grupo de niños de 7 años. En 2023, lo que comenzó como un favor — ser voluntario de un equipo de fútbol en Montessori School of San Antonio después de que el head coach renunció — se convirtió en el inicio de algo más grande: ese equipo terminó la temporada invicto. Regresó el año siguiente con el mismo grupo, ahora dividido en dos: uno terminó invicto, el otro llegó a la final sin perder un solo partido en toda la temporada. De ahí siguió entrenando fútbol americano y basketball en la misma escuela.\n\nFue en ese momento que Coach Marcelo se dio cuenta de lo que realmente quería hacer: ayudar a los niños a desarrollarse, física y mentalmente, para que puedan cumplir sus metas dentro y fuera de la cancha. Así nació Flight Sports Academy. Hoy trabaja de la mano con Montessori School of San Antonio y Joy Holistic Education en el desarrollo de sus estudiantes.",
+      "highlights": [
+        { "value": "5×", "label": "Campeón nacional de Kung Fu" },
+        { "value": "2×", "label": "Campeón internacional de Kung Fu" },
+        { "value": "2015", "label": "NFL Combine" },
+        { "value": "2012", "label": "Entrenando niños desde" }
+      ],
+      "partners": "Trabajando con Montessori School of San Antonio y Joy Holistic Education",
+      "principles": [
+        { "title": "La diversión los hace volver", "text": "Juegos y retos, no ejercicios sin sentido." },
+        { "title": "La estructura crea disciplina", "text": "Rutinas claras y respeto en cada sesión." }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Papás",
+      "title": "Lo que dicen las familias",
+      "items": [
+        { "quote": "[Testimonio — qué ha cambiado en su hijo desde que entró.]", "name": "[Nombre]", "detail": "Mamá/papá de un niño de [edad] años" },
+        { "quote": "[Testimonio — un momento o resultado específico.]", "name": "[Nombre]", "detail": "Mamá/papá de un niño de [edad] años" },
+        { "quote": "[Testimonio — por qué su hijo quiere volver.]", "name": "[Nombre]", "detail": "Mamá/papá de un niño de [edad] años" }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        { "question": "¿A qué edad puede empezar mi hijo?", "answer": "Desde los 2 años. Habilidades Motrices es para niños de 2 a 4 años, Movimiento y Juego para los más pequeños, y los programas por deporte para 7 años en adelante." },
+        { "question": "¿Cómo funciona la clase de prueba?", "answer": "Elige abajo la clase que quieres probar. Te confirmamos por WhatsApp o teléfono y tu hijo se une a una sesión normal." },
+        { "question": "¿Es obligatorio el uniforme?", "answer": "Sí. El uniforme está incluido en la inscripción de $150." },
+        { "question": "¿Cómo son los pagos?", "answer": "Después de la clase de prueba te enviamos un link de pago seguro. La membresía se cobra automáticamente cada mes." },
+        { "question": "¿Hay descuento por hermanos?", "answer": "Sí — 10% de descuento al 2do hijo y 25% del 3er hijo en adelante." }
+      ]
+    },
+    "location": {
+      "eyebrow": "Ubicación",
+      "title": "Dónde entrenamos",
+      "venue": "Joy Holistic Education",
+      "address": "22864 Cielo Vista Dr",
+      "city": "San Antonio, TX",
+      "hours": "Clases de lunes a jueves",
+      "mapsQuery": "Joy Holistic Education 22864 Cielo Vista Dr San Antonio TX"
+    },
+    "trial": {
+      "eyebrow": "Clase de prueba",
+      "title": "Ven a probar una clase.",
+      "text": "Elige la clase que quieres probar y te confirmamos en menos de un día. ¿Prefieres platicar? Escríbenos por WhatsApp.",
+      "successTitle": "¡Solicitud recibida!",
+      "successText": "Te contactaremos en menos de 24 horas para confirmar tu clase de prueba."
+    },
+    "footer": { "text": "© 2026 Flight Sports Academy · San Antonio, TX" },
+    "ui": {
+      "skip": "Ir al contenido",
+      "languageSwitch": "English",
+      "navPrograms": "Programas", "navVideos": "Videos", "navSchedule": "Horario", "navPricing": "Precios", "navAbout": "Coach", "navLocation": "Ubicación",
+      "bookTrial": "Clase de prueba",
+      "videoCta": "Agenda una clase de prueba",
+      "playVideo": "Reproducir video",
+      "closeVideo": "Cerrar video",
+      "scheduleTime": "Hora",
+      "scheduleCta": "Elige una clase para tu prueba",
+      "scheduleTap": "Toca cualquier clase para pedir una prueba en ella.",
+      "group": "Grupo",
+      "pricingCta": "Empieza con una clase de prueba",
+      "aboutCta": "Entrena con nosotros",
+      "getDirections": "Cómo llegar",
+      "whatsappButton": "Escríbenos por WhatsApp",
+      "formParent": "Nombre del papá o mamá",
+      "formPhone": "Teléfono / WhatsApp",
+      "formEmail": "Correo",
+      "formChild": "Nombre del niño",
+      "formAge": "Edad del niño",
+      "formProgram": "Programa",
+      "formChooseProgram": "Elige un programa",
+      "formClass": "¿Qué clase te gustaría probar?",
+      "formAnyTime": "Cualquier horario — ayúdenme a elegir",
+      "formNoClasses": "Te contactaremos con los horarios disponibles para este programa.",
+      "formNotes": "¿Algo que debamos saber?",
+      "optional": "(opcional)",
+      "formSubmit": "Solicitar mi clase de prueba",
+      "formSending": "Enviando…",
+      "formFill": "Por favor llena los campos marcados.",
+      "formError": "Algo salió mal. Intenta de nuevo o escríbenos por WhatsApp.",
+      "sendWhatsapp": "Enviarlo también por WhatsApp",
+      "waHello": "¡Hola! Me gustaría agendar una clase de prueba en Flight Sports Academy.",
+      "waRequested": "¡Hola! Acabo de solicitar una clase de prueba en Flight Sports Academy.",
+      "waParent": "Papá/Mamá", "waChild": "Niño", "waProgram": "Programa", "waClass": "Clase"
+    }
   }
 }
